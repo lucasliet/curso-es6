@@ -6,23 +6,19 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var TodoList = /*#__PURE__*/function () {
-  function TodoList() {
-    _classCallCheck(this, TodoList);
-
-    this.todos = [];
+var Matematica = /*#__PURE__*/function () {
+  function Matematica() {
+    _classCallCheck(this, Matematica);
   }
 
-  _createClass(TodoList, null, [{
-    key: "addTodo",
-    value: function addTodo() {
-      //static não pode puxar o o todo porque static só enxerga a proria função
-      this.todos.push('Novo Todo');
-      console.log(todos);
+  _createClass(Matematica, null, [{
+    key: "soma",
+    value: function soma(a, b) {
+      return a + b;
     }
   }]);
 
-  return TodoList;
+  return Matematica;
 }();
 
-TodoList.addTodo(); //
+console.log(Matematica.soma(1, 2));

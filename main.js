@@ -1,12 +1,6 @@
-class TodoList {
-    constructor(){
-        this.todos = [];
-    }
-
-    static addTodo() { //static não pode puxar o o todo porque static só enxerga a proria função
-        this.todos.push('Novo Todo');
-        console.log(todos);
+class Matematica {
+    static soma(a,b) {
+        return a + b;
     }
 }
-
-TodoList.addTodo(); //
+console.log(Matematica.soma(1,2));
