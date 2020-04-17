@@ -13,10 +13,10 @@ var somarTodosItens = arr.reduce(function (total, next) {
 });
 console.log(somarTodosItens);
 var pares = arr.filter(function (item) {
-  return item % 2 === 0; //condição do item a ser retornado
+  return item % 2 === 0;
 });
 console.log(pares);
 var encontrar = arr.find(function (item) {
-  return item === 9; //retorna '9' se ele existir no array
+  return item === 9;
 });
 console.log(encontrar);
