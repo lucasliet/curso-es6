@@ -1,30 +1,12 @@
-class List{
+class TodoList {
     constructor(){
-        this.data = [];
+        this.todos = [];
     }
 
-    add(data){
-        this.data.push(data);
-        console.log(this.data);
+    static addTodo() { //static não pode puxar o o todo porque static só enxerga a proria função
+        this.todos.push('Novo Todo');
+        console.log(todos);
     }
 }
 
-class TodoList extends List{
-    constructor(){
-        super();
-        this.usuario = 'Lucas';
-    }
-
-    mostraUsuario() {
-        console.log(this.usuario);
-    }
-    
-}
-
-var MinhaLista = new TodoList();
-
-document.getElementById('novotodo').onclick = function() {
-    MinhaLista.add('novo todo');
-}
-
-MinhaLista.mostraUsuario();
+TodoList.addTodo(); //
