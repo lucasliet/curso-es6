@@ -1,3 +1,10 @@
+function soma(...numero){
+    return numero.reduce((total, next) => total + next);
+}
+
+console.log(soma(1,2,3,4,5,6));
+
+
 const user = {
     nome: 'Lucas',
     idade: 25,
@@ -7,18 +14,15 @@ const user = {
     },
 };
 
-// console.log(user.nome);
-// console.log(user.idade);
-// console.log(user.endereco.rua);
+const { nome, ...resto } = user;
 
-// const { nome, idade, endereco, endereco: { rua, numero } } = user;
+console.log(nome);
+console.log(resto);
 
-function dados({nome, idade, endereco, endereco: {rua, numero}}){
-    console.log(nome);
-    console.log(idade);
-    console.log(endereco);
-    console.log(rua);
-    console.log(numero);   
-}
+const arr = [ 1, 2, 3, 4 ];
 
-dados(user);
+const [ a, b, ...c ] = arr;
+
+console.log(a);
+console.log(b);
+console.log(c);
