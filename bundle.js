@@ -12,3 +12,7 @@ var somarTodosItens = arr.reduce(function (total, next) {
   return total + next;
 });
 console.log(somarTodosItens);
+var pares = arr.filter(function (item) {
+  return item % 2 === 0; //condição do item a ser retornado
+});
+console.log(pares);

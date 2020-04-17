@@ -11,3 +11,9 @@ const somarTodosItens = arr.reduce(function(total, next){
 })
 
 console.log(somarTodosItens);
+
+const pares = arr.filter(function(item){
+    return item % 2 === 0; //condição do item a ser retornado
+})
+
+console.log(pares);
