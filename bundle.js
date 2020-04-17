@@ -8,3 +8,7 @@ var newArr = arr.map(function (item, index) {
   };
 });
 console.log(newArr);
+var somarTodosItens = arr.reduce(function (total, next) {
+  return total + next;
+});
+console.log(somarTodosItens);

@@ -5,3 +5,9 @@ const newArr = arr.map(function(item, index){
 });
 
 console.log(newArr);
+
+const somarTodosItens = arr.reduce(function(total, next){
+    return total + next;
+})
+
+console.log(somarTodosItens);
