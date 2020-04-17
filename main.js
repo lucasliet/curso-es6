@@ -1,19 +1,11 @@
-const arr = [ 1, 9, 3, 4, 5, 8, 9 ];
+function soma(a = 3, b = 4){
+    return a + b;
+};
 
-const newArr = arr.map((item, index) => {
-    return { valor:item, posicao:index };
-});
+console.log(soma(1));
+console.log(soma());
 
-console.log(newArr);
+const somaArrow = (a = 3, b = 4) => a + b;
 
-const somarTodosItens = arr.reduce((total, next) => total + next);
-
-console.log(somarTodosItens);
-
-const pares = arr.filter(item => item % 2 === 0);
-
-console.log(pares);
-
-const encontrar = arr.find(item => item === 9);
-
-console.log(encontrar);
+console.log(somaArrow(1));
+console.log(somaArrow());

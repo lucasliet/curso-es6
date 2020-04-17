@@ -1,22 +1,20 @@
 "use strict";
 
-var arr = [1, 9, 3, 4, 5, 8, 9];
-var newArr = arr.map(function (item, index) {
-  return {
-    valor: item,
-    posicao: index
-  };
-});
-console.log(newArr);
-var somarTodosItens = arr.reduce(function (total, next) {
-  return total + next;
-});
-console.log(somarTodosItens);
-var pares = arr.filter(function (item) {
-  return item % 2 === 0;
-});
-console.log(pares);
-var encontrar = arr.find(function (item) {
-  return item === 9;
-});
-console.log(encontrar);
+function soma() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 4;
+  return a + b;
+}
+
+;
+console.log(soma(1));
+console.log(soma());
+
+var somaArrow = function somaArrow() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 4;
+  return a + b;
+};
+
+console.log(somaArrow(1));
+console.log(somaArrow());
