@@ -1,28 +1,19 @@
-function soma(...numero){
-    return numero.reduce((total, next) => total + next);
-}
+const arr1 = [ 1, 2, 3 ];
+const arr2 = [ 5, 6, 7 ];
 
-console.log(soma(1,2,3,4,5,6));
+const uniao = [ ...arr1, ...arr2 ];
 
+console.log(uniao);
 
-const user = {
+const user1 = {
     nome: 'Lucas',
-    idade: 25,
-    endereco:{
-        rua: 'dos Bobos',
-        numero: 0,
-    },
+    faculdade: 'São Judas',
+    equipe: 'DreamTeam',
 };
 
-const { nome, ...resto } = user;
+const user2 = {
+    ...user1,
+    nome: 'Leonardo',
+};
 
-console.log(nome);
-console.log(resto);
-
-const arr = [ 1, 2, 3, 4 ];
-
-const [ a, b, ...c ] = arr;
-
-console.log(a);
-console.log(b);
-console.log(c);
+console.log(user1, user2)
