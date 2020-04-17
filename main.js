@@ -1,4 +1,7 @@
-const usuario = { nome: "Lucas" };
+const arr = [ 1, 3, 4, 5, 8, 9 ];
 
-usuario.nome = "Robertinho";
-console.log(usuario);
+const newArr = arr.map(function(item, index){
+    return { valor:item, posicao:index};
+});
+
+console.log(newArr);
