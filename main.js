@@ -1,11 +1,24 @@
-function soma(a = 3, b = 4){
-    return a + b;
+const user = {
+    nome: 'Lucas',
+    idade: 25,
+    endereco:{
+        rua: 'dos Bobos',
+        numero: 0,
+    },
 };
 
-console.log(soma(1));
-console.log(soma());
+// console.log(user.nome);
+// console.log(user.idade);
+// console.log(user.endereco.rua);
 
-const somaArrow = (a = 3, b = 4) => a + b;
+// const { nome, idade, endereco, endereco: { rua, numero } } = user;
 
-console.log(somaArrow(1));
-console.log(somaArrow());
+function dados({nome, idade, endereco, endereco: {rua, numero}}){
+    console.log(nome);
+    console.log(idade);
+    console.log(endereco);
+    console.log(rua);
+    console.log(numero);   
+}
+
+dados(user);

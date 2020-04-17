@@ -1,20 +1,29 @@
 "use strict";
 
-function soma() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 4;
-  return a + b;
+var user = {
+  nome: 'Lucas',
+  idade: 25,
+  endereco: {
+    rua: 'dos Bobos',
+    numero: 0
+  }
+}; // console.log(user.nome);
+// console.log(user.idade);
+// console.log(user.endereco.rua);
+// const { nome, idade, endereco, endereco: { rua, numero } } = user;
+
+function dados(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade,
+      endereco = _ref.endereco,
+      _ref$endereco = _ref.endereco,
+      rua = _ref$endereco.rua,
+      numero = _ref$endereco.numero;
+  console.log(nome);
+  console.log(idade);
+  console.log(endereco);
+  console.log(rua);
+  console.log(numero);
 }
 
-;
-console.log(soma(1));
-console.log(soma());
-
-var somaArrow = function somaArrow() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 4;
-  return a + b;
-};
-
-console.log(somaArrow(1));
-console.log(somaArrow());
+dados(user);
