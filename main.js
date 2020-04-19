@@ -1,19 +1,10 @@
-const arr1 = [ 1, 2, 3 ];
-const arr2 = [ 5, 6, 7 ];
+const nome = 'Lucas';
+const idade = '25';
 
-const uniao = [ ...arr1, ...arr2 ];
-
-console.log(uniao);
-
-const user1 = {
-    nome: 'Lucas',
+const usuario = {
+    nome,
+    idade,
     faculdade: 'São Judas',
-    equipe: 'DreamTeam',
 };
 
-const user2 = {
-    ...user1,
-    nome: 'Leonardo',
-};
-
-console.log(user1, user2)
+console.log(usuario);
