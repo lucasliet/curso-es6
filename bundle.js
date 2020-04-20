@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("var nome = 'Lucas';\nvar idade = '25';\nvar usuario = {\n  nome: nome,\n  idade: idade,\n  faculdade: 'São Judas'\n};\nconsole.log(usuario);\n\n//# sourceURL=webpack:///./main.js?");
+eval("var nome = 'Lucas';\nvar idade = '25';\nvar usuario = {\n  nome: nome,\n  idade: idade,\n  faculdade: 'São Judas'\n};\nconsole.log(usuario);\nvar arr = [1, 9, 3, 4, 5, 8, 9];\nvar newArr = arr.map(function (item, index) {\n  return {\n    valor: item,\n    posicao: index\n  };\n});\nconsole.log(newArr);\n\n//# sourceURL=webpack:///./main.js?");
 
 /***/ })
 
