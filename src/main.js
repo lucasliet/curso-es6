@@ -12,6 +12,18 @@ class App {
         this.formEl.onsubmit = event => this.addRepository(event)
     }
 
+    setLoading(loadingStatus = true){
+        if (loadingStatus){
+            let loadingEl = document.createElement('span');
+            loadingEl.appendChild(document.createTextNode('Carregando'));
+            loadingEl.setAttribute('id','loading');
+            
+            this.formEl.appendChild(loadingEl);
+        } else {
+            document.getElementById('loading').remove();
+        }
+    }
+
     async addRepository(event){
         event.preventDefault();
 
@@ -20,6 +32,9 @@ class App {
         if (repoInput === 0){
             return
         };
+
+        this.setLoading();
+
         try {
             const response = await api.get(`/repos/${repoInput}`);
 
@@ -39,6 +54,7 @@ class App {
         } catch (error) {
             alert('Esse repositório não existe');
         }
+        this.setLoading(false);
     }
 
     render(){
